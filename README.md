@@ -1,23 +1,35 @@
-# PS2 Modetest
+# PS2 Video Mode Tester
 
-**PS2 Modetest** is a simple test pattern application for the PlayStation 2. It displays a checkerboard pattern in various common display resolutions used by PS2 and PS1 games. This tool is useful for tuning video scalers and setting the sampling phase on devices like the OSSC.
+**PS2 Video Mode Tester** is a simple test pattern application for the PlayStation 2. It displays a checkerboard pattern or a white screen in various common display resolutions used by PS2 and PS1 games. This tool is useful for tuning video scalers and setting the sampling phase on devices like the OSSC.
 
-## Display Modes
+## Video Modes
 
-Press `R1` or `L1` to cycle through the various display modes:
+Press `R2` or `L2` to cycle through the various video modes:
 
-| **Mode** | **Resolution** |
+| **Video Mode** | **Height** |
 |-|-|
-| 480i | 640x448 |
-| 480p | 640x448 |
-| 480i | 512x448 |
-| 480p | 512x448 |
-| 576i | 640x512 |
-| 576i | 512x512 |
-| 240p | 512x240 |
-| 240p | 320x240 |
-| 240p | 256x240 |
+| 480i | 448 |
+| 480p | 448 |
+| 240p | 240 |
+| 576i | 512 |
+| 288p | 288 |
+
+## Patterns
+
+Press `Circle` or `Square` to cycle through the various patterns:
+
+| **Pattern** | **Width** |
+|-|-|
+| Checkerboard | 640 |
+| Checkerboard | 512 |
+| Checkerboard | 320 |
+| Checkerboard | 256 |
+| White Screen | 512 |
+
+## View current mode settings
+
+Press `Cross` to display a 3 seconds banner describing the current mode. It is also displayed automatically on each mode change.
 
 ## Credits
 
-Written by [CosmicScale](https://github.com/CosmicScale)
+Written by [CosmicScale](https://github.com/CosmicScale) and [max-las](https://github.com/max-las)

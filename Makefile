@@ -1,13 +1,16 @@
 EE_BIN = modetestRaw.elf
 EE_BIN_STRIPPED = modetestStripped.elf
 EE_BIN_PACKED = modetest.elf
-EE_OBJS = modetest.o
-EE_LIBS = -L$(PS2SDK)/ports/lib -L$(PS2DEV)/gsKit/lib/ -ldmakit -lgskit -ldebug -lc
+EE_OBJS = modetest.o font.o unscii-8.o
+EE_LIBS = -L$(PS2SDK)/ports/lib -L$(PS2DEV)/gsKit/lib/ -lgskit_toolkit -lgskit -ldmakit -lpng -ljpeg -lz -lm -ldebug -lc
 EE_INCS += -I$(PS2DEV)/gsKit/include
 EE_CFLAGS = -I$(PS2DEV)/gsKit/include
 EE_LDFLAGS = -L$(PS2DEV)/gsKit/lib -lpad
 
 all: $(EE_BIN_PACKED)
+
+unscii-8.o: unscii-8.fnt
+	mips64r5900el-ps2-elf-objcopy -I binary -O elf32-nlittlemips -B mips --rename-section .data=.rodata,alloc,load,readonly,data,contents $< $@
 
 $(EE_BIN_STRIPPED): $(EE_BIN)
 	echo "Stripping..."
