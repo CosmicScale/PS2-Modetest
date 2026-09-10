@@ -1,6 +1,6 @@
-# PS2 Modetest
+# PS2 Video Mode Tester
 
-**PS2 Modetest** is a simple test pattern application for the PlayStation 2. It displays a checkerboard pattern or a white screen in various common display resolutions used by PS2 and PS1 games. This tool is useful for tuning video scalers and setting the sampling phase on devices like the OSSC.
+**PS2 Video Mode Tester** is a simple test pattern application for the PlayStation 2. It displays a checkerboard pattern or a white screen in various common display resolutions used by PS2 and PS1 games. This tool is useful for tuning video scalers and setting the sampling phase on devices like the OSSC.
 
 ## Video Modes
 
